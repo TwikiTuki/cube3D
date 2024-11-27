@@ -1,0 +1,13 @@
+.DS_Store
+._*
+*.o
+*.a
+*.vscode
+*.test
+*.txt
+*.sh
+obj
+cub3D
+a.out
+cub3D.dSYM
+*.swp
