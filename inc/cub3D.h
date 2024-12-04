@@ -30,9 +30,9 @@
 # include <string.h>
 # include <unistd.h>
 
-# include "../lib/libft/libft.h"
-# include "../lib/libft/ft_printf.h"
-# include "../lib/libft/get_next_line.h"
+# include "../lib/libft/libft/libft.h"
+# include "../lib/libft/ft_printf/ft_printf.h"
+# include "../lib/libft/get_next_line/get_next_line.h"
 # include "minimap.h"
 
 /******************************************************************************/
@@ -251,6 +251,7 @@ void		draw_player(t_minimap *minimap);
 int			close_win(t_map *map);
 int			get_square_on_position(t_map *map, t_f_point position);
 t_f_point	from_rad_to_vect(float radians, float len);
+char		*ft_strndup(const char *src, size_t n);
 
 /* ray_calculator */
 void		ray_calculator(t_map *map, t_ray *ray);

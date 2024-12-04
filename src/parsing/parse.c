@@ -86,6 +86,7 @@ int	parse_map(t_aux *chk, char *file, t_map *data)
 		free (chk->line);
 	if (chk->player != 1)
 		exit (msg_error(MAP, -1, "duplicated player"));
+	close(fd);
 	started = get_map(chk, file, data) + close (fd) + check_map(data, -1, -1);
 	return (EXIT_SUCCESS);
 }
