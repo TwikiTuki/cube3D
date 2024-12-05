@@ -91,18 +91,11 @@ dir:
 	mkdir -p $(D_OBJ)/minimap
 libs:
 	make -C $(LIBFT) --no-print-directory
-	make -C $(MINIL) --no-print-directory
+	make -C $(MINIL) --no-print-directory 2>/dev/null
 
 $(D_OBJ)/%.o:$(L_SRC)/%.c Makefile
 	$(CC) -MMD $(DEF_LIB) $(FLAGS) -c $< -o $@ $(INC)
-	$(eval CURRENT_FILE := $(shell echo $$(($(CURRENT_FILE) + 1)))) \
-	$(eval PROGRESS_BAR := $(shell awk "BEGIN { printf \"%.0f\", $(CURRENT_FILE)*100/$(TOTAL_FILES) }")) \
-	printf "\r$B$(ligth)⏳Compiling $(NAME):$E $(ligth)%-30s [$(CURRENT_FILE)/$(TOTAL_FILES)] [%-50s] %3d%%\033[K" \
-	"$<..." "$(shell printf '$(G)█%.0s$(E)$(ligth)' {1..$(shell echo "$(PROGRESS_BAR)/2" | bc)})" $(PROGRESS_BAR)
-	
-	@if [ $(PROGRESS_BAR) = 100 ]; then \
-		echo "$(B) All done$(E)"; \
-	fi
+
 $(NAME): $(OBJ) libs
 	$(CC) $(DEF_LIB) $(FLAGS) $(OBJ) $(L_LIB) $(L_MLX) $(L_FRAME) -o $(NAME) $(INC)
 
