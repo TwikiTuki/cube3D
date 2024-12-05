@@ -8,10 +8,12 @@
 # define MINIMAP_SIZE 200
 # define MAP_SQUARES_SIZE 1
 # define MOVEMENT_DELTA	0.13
-// #define MOVEMENT_DELTA	0.2
+# define MOVEMENT_DELTA	0.2
 # define ROTATION_DELTA	0.06
 # define SCREEN_WIDTH 2480
 # define SCREEN_HEIGHT 1240
+//# define SCREEN_WIDTH 1240
+//# define SCREEN_HEIGHT 620
 
 typedef struct s_img
 {

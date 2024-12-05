@@ -48,7 +48,9 @@
 > 1111111111
 >```
 
-## Conrols
+## Controls
 > * **Movement:** move arround the map with WASD keys.   
 > * **Turn campera:** Turn the camera with left and right arrow keys.
 > * **Exit:** Exit the program with ESC key or by pressing the x window button.
+
+*This project was done with [dacortes](https://github.com/dacortes).*
