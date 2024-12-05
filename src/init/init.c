@@ -18,6 +18,7 @@ int	init_var(t_map *map, t_minimap *minimap)
 	minimap->img.height = minimap->squares_size * map->rows;
 	minimap->img.width = minimap->squares_size * map->cols;
 	minimap->map = map;
+	gettimeofday(&map->player.last_update, NULL);
 	return (EXIT_SUCCESS);
 }
 

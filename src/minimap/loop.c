@@ -5,31 +5,42 @@ void	render(t_map *map);
 
 void	move_player(t_player *player)
 {
+	struct timeval	now;
+	struct timeval	diff;
+	float		delta;
+
+
+	printf("sdaf\n");
+	gettimeofday(&now, NULL);
+	timersub(&now, &player->last_update, &diff);
+	delta = MOVEMENT_DELTA / DELTA_TIME_ADJUSMENT * diff.tv_usec;
 	if (player->movement.y != 0 && player->movement.x != 0)
 	{
 		player->position.x += (player->dir_vect.x
-				* MOVEMENT_DELTA * player->movement.y) / 2;
+				* delta * player->movement.y) / 2;
 		player->position.y += (player->dir_vect.y
-				* MOVEMENT_DELTA * player->movement.y) / 2;
+				* delta * player->movement.y) / 2;
 		player->position.x -= (player->dir_vect.y
-				* MOVEMENT_DELTA * player->movement.x) / 2;
+				* delta * player->movement.x) / 2;
 		player->position.y += (player->dir_vect.x
-				* MOVEMENT_DELTA * player->movement.x) / 2;
+				* delta * player->movement.x) / 2;
 	}
 	else if (player->movement.y != 0)
 	{
 		player->position.x += (player->dir_vect.x
-				* MOVEMENT_DELTA) * player->movement.y ;
+				* delta) * player->movement.y ;
 		player->position.y += (player->dir_vect.y
-				* MOVEMENT_DELTA) * player->movement.y ;
+				* delta) * player->movement.y ;
 	}
 	else if (player->movement.x != 0)
 	{
 		player->position.x -= (player->dir_vect.y
-				* MOVEMENT_DELTA) * player->movement.x ;
+				* delta) * player->movement.x ;
 		player->position.y += (player->dir_vect.x
-				* MOVEMENT_DELTA) * player->movement.x ;
+				* delta) * player->movement.x ;
 	}
+	player->last_update = now;
+	printf("fasd\n");
 }
 
 int	run_game(t_map *map)

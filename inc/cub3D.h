@@ -1,3 +1,4 @@
+#include <stdio.h>
 
 #ifndef CUB3D_H
 # define CUB3D_H
@@ -24,6 +25,8 @@
 # include "../lib/libft/get_next_line/get_next_line.h"
 # include "minimap.h"
 
+# include <sys/time.h>
+# include <sys/types.h>
 /******************************************************************************/
 /*                            MACROS                                          */
 /******************************************************************************/
@@ -136,6 +139,8 @@ typedef struct s_player
 	float			cam_vect_len;
 	t_f_point		camera;
 	t_point			movement;
+
+	struct timeval	last_update;
 }	t_player;
 
 typedef struct s_map
