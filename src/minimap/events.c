@@ -1,5 +1,4 @@
 #include "../../inc/cub3D.h"
-#include <stdio.h>
 
 int	fdf_key_press_hook(int key, t_point *movement)
 {

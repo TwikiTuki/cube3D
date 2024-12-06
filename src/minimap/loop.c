@@ -10,7 +10,6 @@ void	move_player(t_player *player)
 	float		delta;
 
 
-	printf("sdaf\n");
 	gettimeofday(&now, NULL);
 	timersub(&now, &player->last_update, &diff);
 	delta = MOVEMENT_DELTA / DELTA_TIME_ADJUSMENT * diff.tv_usec;
@@ -40,7 +39,6 @@ void	move_player(t_player *player)
 				* delta) * player->movement.x ;
 	}
 	player->last_update = now;
-	printf("fasd\n");
 }
 
 int	run_game(t_map *map)

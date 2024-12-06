@@ -1,6 +1,5 @@
 
 #include "libft.h"
-#include <stdio.h>
 
 char	**ft_charcount(char **s, size_t len, char *val);
 

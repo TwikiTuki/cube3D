@@ -99,6 +99,9 @@ $(D_OBJ)/%.o:$(L_SRC)/%.c Makefile
 $(NAME): $(OBJ) libs
 	$(CC) $(DEF_LIB) $(FLAGS) $(OBJ) $(L_LIB) $(L_MLX) $(L_FRAME) -o $(NAME) $(INC)
 
+deps:
+	apt-get update && apt-get -y install xorg libxext-dev zlib1g-dev libbsd-dev
+
 ################################################################################
 #                               CLEAN                                          #
 ################################################################################

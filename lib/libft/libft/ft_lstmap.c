@@ -1,6 +1,5 @@
 
 #include "libft.h"
-#include "stdio.h"
 
 static void	ft_set_nll(t_list**p1, t_list **p2);
 

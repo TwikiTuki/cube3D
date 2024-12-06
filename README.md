@@ -25,10 +25,10 @@
 >
 >* **Map:** At the end of the file there must be a grid with a 2D representation of the map.
 >The element codes are as follows:
->>* **Wall:** 1.
->>* **Floor:** 0.
->>* **Character initial position and direction:** One of the following: N, S, W, E.
->>* **Empty space**: <space> note that in a valid map this squares should not be reached by the player. 
+>>- **Wall:** 1.
+>>- **Floor:** 0.
+>>- **Character initial position and direction:** One of the following: N, S, W, E.
+>>- **Empty space**: <space> note that in a valid map this squares should not be reached by the player. 
 
 ### Config file example 
 > ```
@@ -52,5 +52,8 @@
 > * **Movement:** move arround the map with WASD keys.   
 > * **Turn campera:** Turn the camera with left and right arrow keys.
 > * **Exit:** Exit the program with ESC key or by pressing the x window button.
+
+![img1](./images/cube.png)
+![img2](./images/cube2.png)
 
 *This project was done with [dacortes](https://github.com/dacortes).*
