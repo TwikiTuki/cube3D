@@ -14,6 +14,7 @@
 >    make
 >    ./cube3D map 
 >```
+> *This project was developed for linux, suport for other systems is not guaranteed*
 
 ### Config file
 >* **File textures:** The file expects 4 lines with the filepaths containing the textures for the walls. Each texture represents one face of the wall (North, South, East, West). For each texture a line with the following pattern has to be provided:
